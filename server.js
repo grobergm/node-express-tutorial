@@ -46,7 +46,7 @@ app.post('/login',function(req,res){
 	}
 
 })
-
+// admin route is protected by checking token in middleware
 app.get('/admin',middleware.checkToken,function(req,res){
 
 	res.json({

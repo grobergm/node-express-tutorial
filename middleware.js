@@ -3,6 +3,7 @@ const checkToken=function(req,res,next){
 
 	if (token){
 	// In practice use json web token verify method to check if token is valid
+	// when next is called in middleware, it will run the next function
 		next()
 	} else {
 		res.json({
